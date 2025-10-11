@@ -1,0 +1,14 @@
+{
+  "name": "200acmp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "webpack server --mode development --open",
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

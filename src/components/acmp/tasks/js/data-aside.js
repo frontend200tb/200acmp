@@ -1,0 +1,4 @@
+// Создаем массив asideThemes с темами для блока aside
+export const asideThemes = [
+  'Задачи 1-50',
+];

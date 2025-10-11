@@ -1,0 +1,136 @@
+/*********************
+Page
+*********************/
+
+
+/* глобальные константы */
+:root {
+  --num-desktop: 1440;
+  --num-tablet: 600px;
+  --num-mobile: 300px;
+}
+
+
+/* правила для всех страниц */
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px;
+  padding-top: 88px;
+  min-height: 100vh;
+  min-width: 400px;
+}
+
+@media (max-width: 580px) {
+  .page {
+    padding-top: 0;
+  }
+}
+/*---------------*/
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: #555;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #865;
+  cursor: pointer;
+}
+
+h1 {
+  margin: 10px 0;
+  text-align: center;
+}
+
+p {
+  margin: 1rem 0 0 0;
+}
+
+li {
+  margin: 0.5rem 0 0 0;
+}
+
+.border {
+  border: 1px solid #333;
+}
+
+.none {
+  display: none;
+}
+
+/* details*/
+details {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+details[open] {
+  padding-left: 20px;
+  border-left: 2px solid #333;
+}
+
+details summary {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* pre*/
+pre,
+code {
+  display: block;
+  margin: .5em;
+  padding: .5em;
+  color: #005588;
+  background-color: #f5f2f0;
+  overflow-x: auto;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+.code-inline {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+.pre_function {
+  color: #DD4A68;
+}
+
+.pre_keyword {
+  color: #07a;
+}
+
+/* showhide*/
+.showhide__h {
+  cursor: pointer;
+}
+
+.time-memory {
+  font-style: italic;
+}
+
+.acmp-tasks {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.acmp-tasks,
+.acmp-tasks tr,
+.acmp-tasks th,
+.acmp-tasks td {
+  border: 2px solid green;
+}
+/* Конец Page */

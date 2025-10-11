@@ -1,0 +1,96 @@
+/*********************
+nav
+*********************/
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 10px 0;
+  padding: 10px 0;
+  text-align: center;
+  border: 5px solid white;
+  border-radius: 20px;
+  box-shadow: 4px 6px #222;
+  /* тень на 4px вправо и 6px вниз */
+
+  & a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #fff;
+    border: 5px solid white;
+    border-radius: 20px;
+    box-shadow: 4px 6px #222;
+  }
+
+  & a:hover {
+    animation: vert 1.5s linear infinite;
+  }
+}
+
+#main-nav {
+  margin-bottom: 10px;
+}
+
+//мобильная версия
+@media (max-width: 580px) {
+  .nav {
+    padding: 0;
+    border: none;
+    box-shadow: none;
+
+    & a {
+      padding: 5px;
+      border: 1px solid white;
+      border-radius: 5px;
+      box-shadow: 4px 6px #222;
+    }
+  }
+}
+
+nav-component .nav {
+  & a:hover {
+    animation: pulse 1.5s linear infinite;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes vert {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Конец Nav */

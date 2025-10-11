@@ -1,0 +1,65 @@
+/*********************
+MAIN
+*********************/
+
+.main__aside {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+@media (max-width: 580px) {
+  .main__aside {
+    flex-direction: column;
+  }
+}
+
+main,
+.main {
+  margin-bottom: 10px;
+  flex-grow: 1;
+  min-width: 320px;
+  vertical-align: top;
+}
+
+/* Конец Main */
+
+.btn-back {
+  display: inline-block;
+  margin: 10px;
+  padding: 5px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #afa;
+  border: 2px #afa solid;
+  border-radius: 10px;
+  background-color: #2a2;
+}
+
+.btn-back:hover {
+  background-color: #6a6;
+  animation: horiz 1.5s linear infinite;
+}
+
+.certificate {
+  width: 100%;
+}
+
+@keyframes horiz {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

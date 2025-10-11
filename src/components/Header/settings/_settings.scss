@@ -1,0 +1,30 @@
+@use 'set-btn/set-btn';
+@use 'set-color/set-color';
+@use 'set-view/set-view';
+@use 'theme/theme';
+@use 'snow/snow';
+@use 'search-btn/search-btn';
+
+/*********************
+settings
+*********************/
+.set-up-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+@media (max-width: 580px) {
+  .set-up-btn {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 580px) {
+  .set-section {
+    justify-content: center;
+  }
+}
+/*---------------*/
+
+/* Конец settings */

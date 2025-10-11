@@ -1,0 +1,68 @@
+/*********************
+Aside
+*********************/
+
+.aside {
+  min-width: 180px;
+  background: none;
+
+  /* Стилизация ссылок левого меню */
+  & a {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+
+    font-size: 1rem;
+    border: 5px solid white;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  & a:hover {
+    animation: horiz 1.5s linear infinite;
+  }
+}
+
+
+// планшетная версия
+@media (max-width: 800px) {
+  .aside {
+    min-width: 132px;
+    max-width: 100%;
+
+    & a {
+      padding: 5px;
+      border: 1px solid white;
+      border-radius: 5px;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .aside {
+    & a {
+      font-size: 1rem;
+    }
+  }
+}
+
+@keyframes horiz {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/* Конец Aside */
