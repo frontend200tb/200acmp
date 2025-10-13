@@ -1437,7 +1437,29 @@ var code = `<!-- Задача 2. Сумма -->
 
 <details>
   <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
 
+using namespace std;
+
+int main() {
+  int n; // от -10000 до +10000
+  cin >> n;
+
+  int sum = 0; // сумма чисел между 1 и n
+  if (n > 1) {
+    for (int i = 1; i &lt;= n; i++) {
+      sum += i;
+    }
+  } else {
+    for (int i = n; i &lt;= 1; i++) {
+      sum += i;
+    }
+  }
+
+  cout &lt;&lt; sum;
+}
+</pre>
 </details>
 `;
 // Exports
@@ -1482,7 +1504,18 @@ var code = `<!-- Задача 3. Пятью пять - двадцать пять
 
 <details>
   <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
 
+using namespace std;
+
+int main() {
+  long long a;
+  cin >> a;
+
+  cout &lt;&lt; a * a;
+}
+</pre>
 </details>
 `;
 // Exports
@@ -1729,14 +1762,14 @@ var code = `<article class="article">
         <td><a href="#t2">Сумма</a></td>
         <td>Целочисленная арифметика</td>
         <td>19%</td>
-        <td></td>
+        <td>+</td>
       </tr>
       <tr>
         <td>3</td>
         <td><a href="#t3">Пятью пять - двадцать пять!</a></td>
         <td>Целочисленная арифметика</td>
         <td>8%</td>
-        <td></td>
+        <td>+</td>
       </tr>
     </tbody>
   </table>
