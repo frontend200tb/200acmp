@@ -2069,7 +2069,20 @@ var code = `<!-- Задача 4. Игра -->
 
 <details>
   <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
 
+using namespace std;
+
+int main() {
+  int n; // цифра от 0 до 9
+  cin >> n;
+
+  int res = n * 100 + 90 + 9 - n;
+
+  cout &lt;&lt; res;
+}
+</pre>
 </details>
 `;
 // Exports
