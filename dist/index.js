@@ -1885,6 +1885,11 @@ var code = `<!-- Задача 2. Сумма -->
 
 <details>
   <summary>Решение</summary>
+  <p>Воспользуемся формулой арифметической прогрессии для суммы чисел от 1 до n</p>
+  <code>sum = n * (n + 1) / 2</code>
+  <p>Для отрицательных n формула будет такой</p>
+  <code>sum = -n * (n - 1) / 2</code>
+  <p>Поскольку значения должны суммироваться до 1, то для отрицательных чисел прибавим к сумме 1.</p>
 <pre>
 #include &lt;iostream&gt;
 
@@ -1894,18 +1899,11 @@ int main() {
   int n; // от -10000 до +10000
   cin >> n;
 
-  int sum = 0; // сумма чисел между 1 и n
-  if (n > 1) {
-    for (int i = 1; i &lt;= n; i++) {
-      sum += i;
-    }
+  if (n > 0) {
+    cout &lt;&lt; n * (n + 1) / 2;
   } else {
-    for (int i = n; i &lt;= 1; i++) {
-      sum += i;
-    }
+    cout &lt;&lt; -n * (n - 1) / 2 + 1;
   }
-
-  cout &lt;&lt; sum;
 }
 </pre>
 </details>
@@ -2137,7 +2135,48 @@ NO
 
 <details>
   <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
 
+using namespace std;
+
+int main() {
+  int n; // число от 1 до 100
+  cin >> n;
+
+  vector&lt;int&gt; A;
+  vector&lt;int&gt; B;
+
+  for (int i = 1; i &lt;= n; i++) {
+    int in;
+    cin >> in;
+    if (in % 2 == 0) {
+      B.push_back(in);
+    } else {
+      A.push_back(in);
+    }
+  }
+
+  for (int i = 0; i &lt; A.size(); i++) {
+    cout &lt;&lt; A[i] &lt;&lt; ' ';
+  }
+
+  cout &lt;&lt; '\\n';
+
+  for (int i = 0; i &lt; B.size(); i++) {
+    cout &lt;&lt; B[i] &lt;&lt; ' ';
+  }
+
+  cout &lt;&lt; '\\n';
+
+  if (B.size() >= A.size()) {
+    cout &lt;&lt; "YES";
+  } else {
+    cout &lt;&lt; "NO";
+  }
+}
+</pre>
 </details>
 `;
 // Exports
@@ -2594,23 +2633,23 @@ var code = `<article class="article">
       <tr>
         <td>4</td>
         <td><a href="#t4">Игра</a></td>
-        <td></td>
+        <td>Задачи для начинающих</td>
         <td>4%</td>
-        <td></td>
+        <td>+</td>
       </tr>
 
       <tr>
         <td>5</td>
         <td><a href="#t5">Статистика</a></td>
-        <td></td>
+        <td>Сортировка и последовательности</td>
         <td>15%</td>
-        <td></td>
+        <td>+</td>
       </tr>
 
       <tr>
         <td>6</td>
         <td><a href="#t6">Шахматы</a></td>
-        <td></td>
+        <td>Целочисленная арифметика</td>
         <td>23%</td>
         <td></td>
       </tr>
@@ -2618,7 +2657,7 @@ var code = `<article class="article">
       <tr>
         <td>7</td>
         <td><a href="#t7">Золото племени АББА</a></td>
-        <td></td>
+        <td>Длинная арифметика</td>
         <td>30%</td>
         <td></td>
       </tr>
@@ -2626,7 +2665,7 @@ var code = `<article class="article">
       <tr>
         <td>8</td>
         <td><a href="#t8">Арифметика</a></td>
-        <td></td>
+        <td>Задачи для начинающих</td>
         <td>5%</td>
         <td></td>
       </tr>
@@ -2634,7 +2673,7 @@ var code = `<article class="article">
       <tr>
         <td>9</td>
         <td><a href="#t9">Домашнее задание</a></td>
-        <td></td>
+        <td>Сортировка и последовательности</td>
         <td>27%</td>
         <td></td>
       </tr>
@@ -2642,7 +2681,7 @@ var code = `<article class="article">
       <tr>
         <td>10</td>
         <td><a href="#t10">Уравнение</a></td>
-        <td></td>
+        <td>Простая математика</td>
         <td>17%</td>
         <td></td>
       </tr>
@@ -2650,7 +2689,7 @@ var code = `<article class="article">
       <tr>
         <td>11</td>
         <td><a href="#t11">Зайчик</a></td>
-        <td></td>
+        <td>Динамическое программирование</td>
         <td>55%</td>
         <td></td>
       </tr>
@@ -2658,7 +2697,7 @@ var code = `<article class="article">
       <tr>
         <td>12</td>
         <td><a href="#t12">Дачники</a></td>
-        <td></td>
+        <td>Геометрия</td>
         <td>45%</td>
         <td></td>
       </tr>
@@ -2666,7 +2705,7 @@ var code = `<article class="article">
       <tr>
         <td>13</td>
         <td><a href="#t13">Быки и коровы</a></td>
-        <td></td>
+        <td>Разбор строк</td>
         <td>20%</td>
         <td></td>
       </tr>
@@ -2674,7 +2713,7 @@ var code = `<article class="article">
       <tr>
         <td>14</td>
         <td><a href="#t14">НОК</a></td>
-        <td></td>
+        <td>Целочисленная арифметика</td>
         <td>19%</td>
         <td></td>
       </tr>
@@ -2682,7 +2721,7 @@ var code = `<article class="article">
       <tr>
         <td>15</td>
         <td><a href="#t15">Дороги</a></td>
-        <td></td>
+        <td>Теория графов</td>
         <td>18%</td>
         <td></td>
       </tr>
@@ -2690,7 +2729,7 @@ var code = `<article class="article">
       <tr>
         <td>16</td>
         <td><a href="#t16">Лесенка</a></td>
-        <td></td>
+        <td>Рекурсия, перебор</td>
         <td>45%</td>
         <td></td>
       </tr>
@@ -2698,7 +2737,7 @@ var code = `<article class="article">
       <tr>
         <td>17</td>
         <td><a href="#t17">Поле чудес</a></td>
-        <td></td>
+        <td>Сортировка и последовательности</td>
         <td>31%</td>
         <td></td>
       </tr>
@@ -2706,7 +2745,7 @@ var code = `<article class="article">
       <tr>
         <td>18</td>
         <td><a href="#t18">Факториал</a></td>
-        <td></td>
+        <td>Длинная арифметика</td>
         <td>42%</td>
         <td></td>
       </tr>
@@ -2714,7 +2753,7 @@ var code = `<article class="article">
       <tr>
         <td>19</td>
         <td><a href="#t19">Ферзь, ладья и конь</a></td>
-        <td></td>
+        <td>Простая математика</td>
         <td>29%</td>
         <td></td>
       </tr>
@@ -2722,7 +2761,7 @@ var code = `<article class="article">
       <tr>
         <td>20</td>
         <td><a href="#t20">Пилообразная последовательность</a></td>
-        <td></td>
+        <td>Сортировка и последовательности</td>
         <td>38%</td>
         <td></td>
       </tr>
@@ -2787,7 +2826,7 @@ var code = `<article class="article">
   <div class="anchor" id="t6"></div>
   <h3>Задача 6. Шахматы</h3>
 
-  <div class="t4"></div>
+  <div class="t6"></div>
 
 </article>
 

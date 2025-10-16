@@ -15,6 +15,11 @@
 
 <details>
   <summary>Решение</summary>
+  <p>Воспользуемся формулой арифметической прогрессии для суммы чисел от 1 до n</p>
+  <code>sum = n * (n + 1) / 2</code>
+  <p>Для отрицательных n формула будет такой</p>
+  <code>sum = -n * (n - 1) / 2</code>
+  <p>Поскольку значения должны суммироваться до 1, то для отрицательных чисел прибавим к сумме 1.</p>
 <pre>
 #include &lt;iostream&gt;
 
@@ -24,18 +29,11 @@ int main() {
   int n; // от -10000 до +10000
   cin >> n;
 
-  int sum = 0; // сумма чисел между 1 и n
-  if (n > 1) {
-    for (int i = 1; i &lt;= n; i++) {
-      sum += i;
-    }
+  if (n > 0) {
+    cout &lt;&lt; n * (n + 1) / 2;
   } else {
-    for (int i = n; i &lt;= 1; i++) {
-      sum += i;
-    }
+    cout &lt;&lt; -n * (n - 1) / 2 + 1;
   }
-
-  cout &lt;&lt; sum;
 }
 </pre>
 </details>

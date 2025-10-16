@@ -33,5 +33,46 @@ NO
 
 <details>
   <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
 
+using namespace std;
+
+int main() {
+  int n; // число от 1 до 100
+  cin >> n;
+
+  vector&lt;int&gt; A;
+  vector&lt;int&gt; B;
+
+  for (int i = 1; i &lt;= n; i++) {
+    int in;
+    cin >> in;
+    if (in % 2 == 0) {
+      B.push_back(in);
+    } else {
+      A.push_back(in);
+    }
+  }
+
+  for (int i = 0; i &lt; A.size(); i++) {
+    cout &lt;&lt; A[i] &lt;&lt; ' ';
+  }
+
+  cout &lt;&lt; '\n';
+
+  for (int i = 0; i &lt; B.size(); i++) {
+    cout &lt;&lt; B[i] &lt;&lt; ' ';
+  }
+
+  cout &lt;&lt; '\n';
+
+  if (B.size() >= A.size()) {
+    cout &lt;&lt; "YES";
+  } else {
+    cout &lt;&lt; "NO";
+  }
+}
+</pre>
 </details>
