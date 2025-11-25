@@ -1490,7 +1490,31 @@ var code = `<!-- Задача 11. Зайчик -->
 
 <details>
   <summary>Решение</summary>
+<pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
 
+using namespace std;
+
+int main() {
+  int k, n;
+  cin >> k >> n;
+
+  vector&lt;long long&gt; DP(n+1);
+  DP[0] = 1;
+  long long sum = 1;
+
+  for (int i = 1; i &lt;= n; i++) {
+    if (i - k - 1 >= 0) {
+      sum -= DP[i - k - 1];
+    }
+    DP[i] = sum;
+    sum += DP[i];
+  }
+
+  cout &lt;&lt; DP[n];
+}
+</pre>
 </details>
 `;
 // Exports
