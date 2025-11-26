@@ -2,7 +2,8 @@
 Функция pageLink вешает обработчик клика на элементы asideMenu
 ************************/
 import {pages}   from './data-pages';
-import in1       from '../pages/elem-tasks1-50';
+import in1       from '../pages/elem-tasks1';
+import in2       from '../pages/elem-tasks2';
 
 export default function pageLink(asideItems, currentContent) {
   asideItems.forEach((elem, index) => {
@@ -15,6 +16,7 @@ export default function pageLink(asideItems, currentContent) {
         // подключаем на каждую страницу свои задачи
         switch (index) {
           case 0:  in1(); break;
+          case 1:  in2(); break;
         }
       }
     });
